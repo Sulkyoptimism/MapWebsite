@@ -1,0 +1,7 @@
+.wrapper-class {
+    height: 100% !important;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: -1rem;
+}

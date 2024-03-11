@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MainPage from "../components/page-comp";
+---
+
+<Layout title="Welcome to Astro.">
+	<main class="relative bg-texture">
+		<!--<div class="top-cutout w-full z-10" style="top: -340px; height: 40rem"></div>-->
+		<div class="space-bg ellipse flex flex-col justify-center">
+			<MainPage client:load></MainPage>
+		</div>
+		<!--<div class="bottom-cutout w-full z-10" style="bottom: 0px; height: 20rem"></div>-->
+	</main>
+</Layout>
+
+<style>
+	:root {
+		height: 100%;
+	}
+	main {
+		margin: auto;
+		width: 100vw;
+		height: 100%;
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.bg-texture {
+		background-image: url("/background.webp");
+		background-size: 100%;
+		overflow: hidden;
+	}
+	.bottom-cutout,
+	.top-cutout {
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}
+	.bottom-cutout {
+		background-image: url("/bottomCutout.webp");
+	}
+	.top-cutout {
+		background-image: url("/topCutout.webp");
+	}
+	.space-bg {
+		height: 100%;
+		overflow: hidden;
+		background-image: url("/starsb.webp");
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.ellipse{
+		height: 850px;
+		width: 120vw;
+		margin-top: 2rem;
+		margin-left: -10vw;
+		border-radius: 50%;
+	}
+	.react-transform-component{
+		height: 100%;
+	}
+</style>
