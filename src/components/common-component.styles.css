@@ -5,3 +5,12 @@
     align-items: center;
     margin-top: -1rem;
 }
+.moon-img {
+    border-radius: 50%;
+    height: 100%;
+    transition: height 0.1s;
+}
+.moon-img:hover {
+    box-shadow: 0 0 7px 3px, inset 0 0 5px 2px;
+    height: 110%;
+}
